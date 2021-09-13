@@ -1,0 +1,24 @@
+.thank-you{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .header-thank{
+        font-weight: bold;
+        font-size: 120px;
+        color: $MainColor;
+    }
+
+    .message-thank{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .cart-link{
+        a{
+            color: $MainColor;
+        }
+    }
+}

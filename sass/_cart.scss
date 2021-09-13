@@ -1,0 +1,35 @@
+.cart-list{
+    height: 90vh;
+    margin-top: 3rem;
+    .title{
+        margin-bottom: 2rem;
+    }
+}
+
+
+.cart-item{
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid $Border;
+    border-radius: 15px;
+    margin-top: 1rem;
+    .prod-img{
+        height: 110px;
+        width: auto;
+    }
+    .qty{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.checkout-sec{
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

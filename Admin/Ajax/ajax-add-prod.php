@@ -2,9 +2,11 @@
 
 <?php
 
+
+include "./ajax-func.php";
 $imagePath = null;
 
-if (!empty($_POST['title'])){
+if (!empty($_POST['title']) or !empty($_POST['specs']) or !empty($_POST['price']) or !empty($_POST['image'])){
 
 	$target_dir = '../../Uploads/';
 	$target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -28,5 +30,19 @@ if (!empty($_POST['title'])){
 	}
 
 	$title=$_POST['title'];
-	echo $imagePath;
+	$price=$_POST['price'];
+	$specs=$_POST['specs'];
+	$desc=$_POST['desc'];
+
+	$ProductDetails=[
+		'title'=>$title,
+		'price'=>$price,
+		'specs'=>$specs,
+		'imagePath'=>$imagePath,
+		'desc'=>$desc,
+	];
+
+	$ProductsModel->InsertProduct($ProductDetails);
+
+	echo 'Product Added Successfully';
 }

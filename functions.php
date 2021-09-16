@@ -1,4 +1,7 @@
 <?php
-include "./Database/DBContext.php";
+include "./Database/DBController.php";
+include "./Database/ProductsModel.php";
 
-$db= new DBContext();
+$db= new DBController();
+
+$ProductsModel = new ProductsModel($db);

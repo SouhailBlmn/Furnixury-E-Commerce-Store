@@ -1,5 +1,6 @@
 <?php
 include_once "_layout-start.php";
+include_once "./functions.php";
 ?>
 <div class="container all-content">
     <div class="products">
@@ -35,6 +36,10 @@ include_once "_layout-start.php";
 
             <input name="product-submit" type="submit" class="btn btn-primary" id="button">
         </form>
+
+
+
+
     </div>
 </div>
 

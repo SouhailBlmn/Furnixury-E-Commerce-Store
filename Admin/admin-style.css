@@ -273,3 +273,8 @@ h1 {
 .all-content{
     margin-top: 2rem;
 }
+
+.prod-img-thumb{
+    height: 100px;
+    width: auto;
+}

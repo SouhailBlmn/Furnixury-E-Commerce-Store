@@ -136,7 +136,6 @@
 }
 
 .cart-list {
-    height: 90vh;
     margin-top: 3rem;
 }
 .cart-list .title {
@@ -663,3 +662,9 @@ main .sofa {
 .btn-send {
     width: 40px;
 }
+
+#cart_total{
+    color: #167873;
+    font-weight: bold;
+}
+

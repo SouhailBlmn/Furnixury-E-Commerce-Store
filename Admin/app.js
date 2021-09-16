@@ -4,7 +4,7 @@ $(document).ready((e)=>{
     //     e.preventDefault();
     //     console.log('works');
     //     $.ajax({
-    //         url: "process.php",
+    //         url: "ajax-add-prod.php",
     //         type: "POST",
     //         data:  new FormData(this),
     //         contentType: false,
@@ -20,7 +20,7 @@ $(document).ready((e)=>{
     $('#prod-form').on('submit',function(e){
         e.preventDefault();
         $.ajax({
-            url: "./ajax/process.php",
+            url: "./ajax/ajax-add-prod.php",
                     type: "POST",
                     data:  new FormData(this),
                     contentType: false,

@@ -1,3 +1,10 @@
+<?php
+session_start();
+$Cart_Total=0;
+foreach ($_SESSION["cart"] as $item){
+	$Cart_Total+=$item['total_price'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +35,7 @@
 				<i class="fas fa-search "></i>
 				<i class="fas fa-user-alt"></i>
 				<i class="fas fa-shopping-cart"></i>
-				<span class="amount">$55.95</span>
+				<span class="amount" id="cart_total">$<?php echo $Cart_Total ?></span>
 			</div>
 		</nav>
 

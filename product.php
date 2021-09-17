@@ -38,17 +38,21 @@ $Price=$Product['Price'];
 					<div class="cont">
 						<h4 class="price">$<?php echo $Price ?></h4>
                         <form method="post" id="atc">
-                            <input name="id" hidden value="<?php echo $product_id?>">
+                            <input id="id" name="id" hidden value="<?php echo $product_id?>">
                             <input name="image" hidden value="<?php echo $ImagePath?>">
                             <input name="title" hidden value="<?php echo $Title?>">
                             <input name="price" hidden value="<?php echo $Price?>">
-                            <input name="qty" value="1" type="number">
+                            <input id="qty" name="qty" min="1" value="1" type="number">
                             <button name="add-to-cart" type="submit" class="btn btn-green btn-product btn-cart">Add To Cart</button>
                         </form>
 
 
 					</div>
-                    <div id="result" class="d-none alert alert-success"></div>
+                    <div id="result" class=" alert alert-success"></div>
+
+                    <form id="product_id_form" method="post">
+                        <input hidden name="prod_id" value="<?php echo $product_id ?>">
+                    </form>
 
                     <h4 class="rating-title">Rating :</h4>
 					<div class="reviews">

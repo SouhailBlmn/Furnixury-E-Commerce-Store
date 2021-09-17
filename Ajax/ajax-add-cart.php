@@ -9,21 +9,26 @@ $product_id=$_POST['id'];
 $product_name=$_POST['title'];
 $total_price=$item_price*$qty;
 
-$Cart_item=[
-	'id'=>$product_id,
-	'title'=>$product_name,
-	'image'=>$image,
-	'unit_price'=>$item_price,
-	'total_price'=>$total_price,
-	'quantity'=>$qty,
-];
+$check=null;
 
-if (isset($_SESSION["cart"])){
-	array_push($_SESSION["cart"],$Cart_item);
-
+foreach ($_SESSION["cart"] as &$item){
+	if ($item['id']==$product_id) {
+		$new_qty=$item['quantity']+$qty;
+		$item['quantity']=$new_qty;
+		$item['total_price'] += $total_price;
+		$check=1;
+	}
 }
-else{
-	$_SESSION["cart"]=array();
+if ($check===null){
+	$Cart_item=[
+		'id'=>$product_id,
+		'title'=>$product_name,
+		'image'=>$image,
+		'unit_price'=>$item_price,
+		'total_price'=>$total_price,
+		'quantity'=>$qty,
+	];
+
 	array_push($_SESSION["cart"],$Cart_item);
 }
 

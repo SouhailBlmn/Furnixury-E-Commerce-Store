@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION["cart"])){
+	$_SESSION["cart"]=array();
+}
 $Cart_Total=0;
 foreach ($_SESSION["cart"] as $item){
 	$Cart_Total+=$item['total_price'];
